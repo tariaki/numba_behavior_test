@@ -30,7 +30,7 @@ print(f"{type_checker_2.signatures =}")
 def type_checker_3(arg):
     return arg
 
-# typed-list生成関数をで生成
+# typed-list生成関数で生成
 typedlist = numba.typed.List([1.11, 2.22, 3.33])
 type_checker_3(typedlist)
 print(f"{type_checker_3.signatures =}")
