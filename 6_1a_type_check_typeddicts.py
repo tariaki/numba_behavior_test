@@ -5,7 +5,7 @@ import numba
 def type_checker_1(arg):
     return arg
 
-# Python領域でtyped-list生成関数を使用して生成
+# Python領域でtyped-dict生成関数を使用して生成
 typeddict_in_py = numba.typed.Dict()
 typeddict_in_py[1] = 1.11
 typeddict_in_py[2] = 2.22
@@ -18,7 +18,7 @@ print(f"{type_checker_1.signatures =}")
 def type_checker_2(arg):
     return arg
 
-# Numba化関数内でtyped-list生成関数を使用して生成
+# Numba化関数内でtyped-dict生成関数を使用して生成
 @numba.jit(nopython=True)
 def make_typeddict_in_numba_explicitly(n):
     typeddict_in_numba_explicitly = numba.typed.Dict()
